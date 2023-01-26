@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_01_19_215337) do
+ActiveRecord::Schema.define(version: 2023_01_22_210311) do
 
   create_table "chapters", force: :cascade do |t|
     t.string "name"
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 2023_01_19_215337) do
     t.integer "age"
     t.string "hometown"
     t.integer "chapter_id"
+    t.string "gender"
   end
 
 end
