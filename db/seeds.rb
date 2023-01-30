@@ -1,4 +1,3 @@
-require 'faker'
 puts "🌱 Seeding spices..."
 
 air_7_cebu = Chapter.create(name: "Air7Cebu", location: "Cebu City")

@@ -7,12 +7,44 @@ class ApplicationController < Sinatra::Base
     member.to_json
   end
 
-  get "/chapters" do
-    chapter = Chapter.all.order(:name)
-    # chapter_name = chapter.map do |chap|
-    #   chap.name
+  # get "/members/:hometown" do
+  #   member = Member.all.filter do |member|
+  #     member.hometown == params[:hometown]
+  #   end
+  #   member.to_json
+  # end
+  
+  # get "/chapters" do
+  #   chapter = Chapter.all.order(:name)
+  #   # chapter_name = chapter.map do |chap|
+  #   #   chap.name
+  #   # end
+  #   # chapter_name.to_json
+  #   chapter.to_json
+  # end
+
+  # get "/chapters/:name" do 
+  #   chapter_name = Chapter.all.filter do |chapter|
+  #     chapter.name == params[:name]
+  #   end
+  #   chapter_name.to_json
+
+    # member_chapter_name = Member.filter do |member|
+    #   member.chapter.name == params[:name]
     # end
-    # chapter_name.to_json
+    # member_chapter_name.to_json
+
+    # member_chapter_name = Member.all.filter do |member|
+    #   member.chapter_id.name == params[:name]
+    # end
+    # chapter_name = Chapter.filter do |chapter|
+    #   chapter.name == params[:name]
+    #   .members
+  
+  # end
+
+  get "/chapters" do
+    chapter = Chapter.all
     chapter.to_json
   end
 
@@ -32,6 +64,7 @@ class ApplicationController < Sinatra::Base
     member.update(
       name:params[:name],
       age:params[:age],
+      gender:params[:gender],
       hometown:params[:hometown],
       chapter_id:params[:chapter_id]
     )
