@@ -37,12 +37,6 @@ Open a new terminal and run ```bundle install && bundle exec rake server``` to i
 * When the info icon is clicked, you'll be able to edit some information of the particular member. 
 * You can also add a new member by clicking the Add Member button on the navbar. A form will pop up. Just fill in the required data and submit, and this will be addded to the member list.
 
-## The App
-
-## Credits
-    [google](https://www.google.com/) for all the images
-
-
 ## MIT License
 
 Copyright (c) 2019 GitHub, Inc.
